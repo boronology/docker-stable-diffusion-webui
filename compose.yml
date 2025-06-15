@@ -1,0 +1,11 @@
+
+services:
+  webui:
+    image: boronology/sdwu
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "127.0.0.1:7860:7860"
+    volumes:
+      - "./models:/opt/webui/v1.10.1/models:rw"
